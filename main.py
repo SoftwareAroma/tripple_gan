@@ -36,8 +36,6 @@ def train_or_test(options):
         print("Starting training...")
         for epoch in range(options.num_epochs):
             for i, (imgs, labels) in enumerate(dataloader):
-                # call the forwad pass of the model
-                gan_model(imgs, labels)
                 d_loss, g_loss, c_loss = gan_model.train_step(imgs, labels)
 
             print(f"Epoch [{epoch+1}/{options.num_epochs}], d_loss: {d_loss.item():.4f}, g_loss: {g_loss.item():.4f}, c_loss: {c_loss.item():.4f}")
