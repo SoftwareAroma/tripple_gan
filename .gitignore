@@ -11,3 +11,4 @@ build/
 .idea/
 *.ipynb_checkpoints/
 *.log
+*.txt

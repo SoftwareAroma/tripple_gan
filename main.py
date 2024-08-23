@@ -30,7 +30,7 @@ def train_or_test(options):
         optimizer_C=optimizer_C,
         options=options,
         latent_dim=options.latent_dim
-    )    
+    )
 
     if options.train:
         print("Starting training...")
